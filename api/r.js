@@ -1,5 +1,5 @@
 // Personal share pages for Guess the Perfume.
-// perfume.studiohans.agency/r/<id> (and the older share.studiohans.agency/r/<id>) returns a tiny page whose preview tags point to that
+// perfume.studiohans.agency/<id> (also /r/<id> and share.studiohans.agency/r/<id>) returns a tiny page whose preview tags point to that
 // player's result card, so X, WhatsApp, iMessage and others show it. People who open
 // the link are sent straight to the game.
 const SUPABASE = 'https://oxhctjefjcoqdiyqeuwn.supabase.co';
@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
     ? `${row.right_count}/${row.total} bottles in ${MODES[row.mode] || 'the game'}, ranked "${row.tier}". Think your nose can beat it?`
     : 'A fragrance quiz with the label hidden. Name the house or the exact perfume in ten rounds, try the daily bottle and climb the leaderboard.';
   const image = row ? `${SUPABASE}/storage/v1/object/public/cards/${row.id}.jpg` : `${GAME}og-image.png`;
-  const url = row ? `${GAME}r/${row.id}` : GAME;
+  const url = row ? `${GAME}${row.id}` : GAME;
   const target = `${GAME}?ref=share`;
 
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
