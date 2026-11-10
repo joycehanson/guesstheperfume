@@ -29,6 +29,7 @@ module.exports = async (req, res) => {
   const target = `${GAME}?ref=share`;
 
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Cache-Control', row ? 'public, max-age=300, s-maxage=86400' : 'public, max-age=60');
   res.status(200).send(`<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
