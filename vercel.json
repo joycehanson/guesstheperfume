@@ -5,6 +5,10 @@
       "destination": "/privacy.html"
     },
     {
+      "source": "/impressum",
+      "destination": "/impressum.html"
+    },
+    {
       "source": "/r/:id",
       "destination": "/api/r?id=:id"
     },
