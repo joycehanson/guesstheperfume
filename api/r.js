@@ -5,7 +5,7 @@
 const SUPABASE = 'https://oxhctjefjcoqdiyqeuwn.supabase.co';
 const KEY = 'sb_publishable_XiZkUBVbue3ZR3_ejL80bQ_RMorZqTg'; // public key, read only here
 const GAME = 'https://perfume.studiohans.agency/';
-const MODES = { house: 'Name the House', scent: 'Name the Scent', daily: 'the Daily bottle' };
+const MODES = { house: 'Name the House', scent: 'Name the Scent', designer: 'Name the Designer', daily: 'the Daily bottle' };
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
