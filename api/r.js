@@ -19,8 +19,7 @@ module.exports = async (req, res) => {
       row = Array.isArray(j) && j[0] ? j[0] : null;
     } catch (e) {}
   }
-  const who = row && row.name ? row.name : 'A player';
-  const title = row ? `${who} scored ${Number(row.score).toLocaleString('en-US')} points on Guess the Perfume` : 'Guess the Perfume: How well do you know your bottles?';
+  const title = row ? `I scored ${Number(row.score).toLocaleString('en-US')} points on Guess the Perfume` : 'Guess the Perfume: How well do you know your bottles?';
   const desc = row
     ? `${row.right_count}/${row.total} bottles in ${MODES[row.mode] || 'the game'}, ranked "${row.tier}". Think your nose can beat it?`
     : 'A fragrance quiz with the label hidden. Name the house or the exact perfume in ten rounds, try the daily bottle and climb the leaderboard.';
